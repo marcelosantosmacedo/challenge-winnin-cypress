@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Cypress Run
+        uses: cypress-io/github-action@v4
         run: |
           npx cypress run --env grepTags=@${{ inputs.tag }}
 
