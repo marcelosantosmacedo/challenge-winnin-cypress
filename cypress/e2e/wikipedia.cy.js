@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('Test Suite - Wikipedia', function() {
+describe('Test Suite - Wikipedia', { tags: '@regression' }, function() {
 
   beforeEach(() => {
     cy.visit('https://www.wikipedia.org/')
@@ -59,5 +59,13 @@ describe('Test Suite - Wikipedia', function() {
 
   })
 
+  describe('Search functionality', function() {
+    it('Search - Brasil content in portuguese Language', { tags: '@smoke' }, function() {
+      cy.searchContentPT()
+      cy.url().should('be.equal', 'https://pt.wikipedia.org/wiki/Brasil')
+      cy.get('h1[id="firstHeading"]').contains('Brasil')
+      cy.get('img[alt="Bandeira do Brasil"]').should('be.visible')
+    })
 
+  })
 })

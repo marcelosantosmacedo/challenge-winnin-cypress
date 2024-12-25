@@ -1,5 +1,32 @@
-describe('template spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+/// <reference types="Cypress" />
+
+describe('Test Suite - GraphQL', { tags: '@regression' }, function() {
+  it('Graphql - Get user by id', { tags: '@smoke' }, function(){
+    var queryUser = `
+      query {
+        user(id: 1) {
+          id
+          username
+          email
+          address {
+            geo {
+              lat
+              lng
+            }
+          }
+        }
+      }`
+
+    cy.request({
+      method: 'POST',
+      url: 'https://graphqlzero.almansi.me/api',
+      body: {
+        query: queryUser
+      }
+    }).then(response => {
+      expect(response.status).to.eq(200);
+      cy.log(response.body)
+    })    
   })
+
 })
