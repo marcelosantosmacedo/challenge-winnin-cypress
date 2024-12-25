@@ -16,8 +16,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cypress Run
-        uses: cypress-io/github-action@v4
+      - name: Install Cypress
+        uses: cypress-io/github-action@v6
+        with:
+          runTests: false
+
+      - name: Run tests with defined tag
         run: |
           npx cypress run --env grepTags=@${{ inputs.tag }}
 
