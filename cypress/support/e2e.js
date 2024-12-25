@@ -16,3 +16,5 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import './set-top-language'
+const registerCypressGrep = require('@cypress/grep')
+registerCypressGrep()

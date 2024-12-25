@@ -1,0 +1,23 @@
+name: Front-end Tests - Manual Workflow 🧪
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        type: string
+        description: Which tag will be executed?
+        required: true
+
+jobs:
+  web-test:
+    runs-on: ubuntu-20.04
+    permissions: write-all
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress Run
+        run: |
+          npx cypress run --env grepTags=@${{ inputs.tag }}
+
+      

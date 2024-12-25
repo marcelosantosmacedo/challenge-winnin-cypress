@@ -7,7 +7,7 @@ describe('Test Suite - Wikipedia', function() {
   })
 
   describe('Elements from Home Page - Top 10 Languages', function() {
-    it('Top languages - English must be visible and clickable', function() {
+    it('Top languages - English must be visible and clickable', { tags: '@smoke' }, function() {
       cy.accessMainPageEN()
       cy.contains('Welcome to Wikipedia')
     })
