@@ -28,6 +28,9 @@ Run `npm run cy:run:mobile` to run the test in headless mode no a mobile viewpor
 
 Or, run `npm run cy:open:mobile` to open Cypress in interactive mode on a mobile viewport.
 
+### GitHub Actions
+
+In this project there are two types of GitHub Actions files, where the `ci.yml` file automatically executes the tests with each `"push"` performed, and the `cy-manual-wf.yml` file allows manual execution of the workflow (workflow_dispatch), where you define an execution `tag` (e.g. `smoke`)
 ___
 
 This project was created by Marcelo Santos Macedo.
