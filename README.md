@@ -32,7 +32,7 @@ Or, run `npm run cy:open:mobile` to open Cypress in interactive mode on a mobile
 
 Run `npm run cy:run:visualtest:base` to run the test and generate a base image to compare with future executions (`./cypress/snapshots/base` folder will be created).
 
-Run `npm run cy:run:visualtest:actual` to run the test and generate the actual visual result and will be compared with the base image (`./cypress/snapshots/actual folder will be created).`
+Run `npm run cy:run:visualtest:actual` to run the test and generate the actual visual result and will be compared with the base image (`./cypress/snapshots/actual` folder will be created).
 
 ### GitHub Actions
 
