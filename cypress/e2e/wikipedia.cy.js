@@ -68,4 +68,74 @@ describe('Test Suite - Wikipedia', { tags: '@regression' }, function() {
     })
 
   })
+
+  describe('Elements from Home Page - All languages ', function() {
+    it('All languages - Expand options', function() {
+      cy.expandAllLanguages()
+    })
+
+    it('All languages - Hide options', function() {
+      cy.hideAllLanguages()
+    })
+
+    it('All languages - Access the language list page', { tags: '@smoke' }, function() {
+      cy.languageListPage()
+    })
+
+  })
+
+  describe('Elements from Home Page - Footer Options', function() {
+    it('Footer Options - Other Project - Commons', { tags: '@smoke' }, function() {
+      cy.accessOtherProjectCommons()
+    })
+
+    it('Footer Options - Other Project - Wikivoyage', function() {
+      cy.accessOtherProjectWikivoyage()
+    })
+
+    it('Footer Options - Other Project - Wiktionary', function() {
+      cy.accessOtherProjectWiktionary()
+    })
+
+    it('Footer Options - Other Project - Wikibooks', function() {
+      cy.accessOtherProjectWikibooks()
+    })
+
+    it('Footer Options - Other Project - Wikinews', function() {
+      cy.accessOtherProjectWikinews()
+    })
+
+    it('Footer Options - Other Project - Wikidata', function() {
+      cy.accessOtherProjectWikidata()
+    })
+
+    it('Footer Options - Other Project - Wikiversity', function() {
+      cy.accessOtherProjectWikiversity()
+    })
+
+    it('Footer Options - Other Project - Wikiquote', function() {
+      cy.accessOtherProjectWikiquote()
+    })
+
+    it('Footer Options - Other Project - MediaWiki', function() {
+      cy.accessOtherProjectMediawiki()
+    })
+
+    it('Footer Options - Other Project - Wikisource', function() {
+      cy.accessOtherProjectWikisource()
+    })
+
+    it('Footer Options - Other Project - Wikispecies', function() {
+      cy.accessOtherProjectWikispecies()
+    })
+
+    it('Footer Options - Other Project - Wikifunctions', function() {
+      cy.accessOtherProjectWikifunctions()
+    })
+
+    it('Footer Options - Other Project - Meta-Wiki', function() {
+      cy.accessOtherProjectMetawiki()
+    })
+  })
+
 })

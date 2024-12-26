@@ -29,7 +29,6 @@ describe('Test Suite - GraphQL', { tags: '@regression' }, function() {
       expect(response.body.data.user).to.have.property('id','1');
       expect(response.body.data.user).to.have.property('username','Bret');
       expect(response.body.data.user).to.have.property('email','Sincere@april.biz');
-      //expect(response.body.data.user.address.geo).to.have.property('lat','-37.3159');
       cy.log(response.body)
     })    
   })
