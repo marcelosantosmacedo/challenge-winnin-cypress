@@ -6,8 +6,9 @@ module.exports = defineConfig({
       // implement node event listeners here
       require('@cypress/grep/src/plugin')(config);
       return config;
-      retries: 3;
+      
     },
+    retries: 3,
   },
 });
 
