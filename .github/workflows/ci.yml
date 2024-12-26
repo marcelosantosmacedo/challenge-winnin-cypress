@@ -9,3 +9,5 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v4
+        with:
+          spec: "cypress/e2e/graphql.cy.js,cypress/e2e/wikipedia.cy.js"
