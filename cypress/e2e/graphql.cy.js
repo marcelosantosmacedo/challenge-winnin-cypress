@@ -2,6 +2,7 @@
 
 describe('Test Suite - GraphQL', { tags: '@regression' }, function() {
   it('Graphql - Get user by id', { tags: '@smoke' }, function(){
+    
     var queryUser = `
       query {
         user(id: 1) {
@@ -25,6 +26,10 @@ describe('Test Suite - GraphQL', { tags: '@regression' }, function() {
       }
     }).then(response => {
       expect(response.status).to.eq(200);
+      expect(response.body.data.user).to.have.property('id','1');
+      expect(response.body.data.user).to.have.property('username','Bret');
+      expect(response.body.data.user).to.have.property('email','Sincere@april.biz');
+      //expect(response.body.data.user.address.geo).to.have.property('lat','-37.3159');
       cy.log(response.body)
     })    
   })
