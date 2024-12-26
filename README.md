@@ -28,6 +28,12 @@ Run `npm run cy:run:mobile` to run the test in headless mode no a mobile viewpor
 
 Or, run `npm run cy:open:mobile` to open Cypress in interactive mode on a mobile viewport.
 
+### Visual Testing
+
+Run `npm run cy:run:visualtest:base` to run the test and generate a base image to compare with future executions (`./cypress/snapshots/base` folder will be created).
+
+Run `npm run cy:run:visualtest:actual` to run the test and generate the actual visual result and will be compared with the base image (`./cypress/snapshots/actual folder will be created).`
+
 ### GitHub Actions
 
 In this project there are two types of GitHub Actions files, where the `ci.yml` file automatically executes the tests with each `"push"` performed, and the `cy-manual-wf.yml` file allows manual execution of the workflow (workflow_dispatch), where you define an execution `tag` (e.g. `smoke`)

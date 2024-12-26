@@ -41,3 +41,7 @@ Cypress.Commands.add('languageListPage', function() {
     cy.get('h1[id="firstHeading"]').contains('List of Wikipedias')
   })
 })
+
+import compareSnapshotCommand from 'cypress-visual-regression/dist/command';
+
+compareSnapshotCommand();

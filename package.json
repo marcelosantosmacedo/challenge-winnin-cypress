@@ -8,7 +8,10 @@
     "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
     "cy:run": "cypress run",
     "cy:run:mobile": "cypress run --config viewportWidth=410 viewportHeight=860",
-    "cy:run:smoke": "cypress run --env grepTags=@smoke"
+    "cy:run:smoke": "cypress run --env grepTags=@smoke",
+    "cy:run:visualtest:base": "cypress run --env type=base",
+    "cy:run:visualtest:actual": "cypress run --env type=actual"
+
   },
   "author": "Marcelo Macedo",
   "license": "ISC",
@@ -18,6 +21,7 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "@cypress/grep": "^4.1.0"
+    "@cypress/grep": "^4.1.0",
+    "cypress-visual-regression": "^3.0.0"
   }
 }
