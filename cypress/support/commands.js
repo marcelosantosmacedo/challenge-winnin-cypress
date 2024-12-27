@@ -32,10 +32,9 @@ Cypress.Commands.add('hideAllLanguages', function() {
 
 Cypress.Commands.add('languageListPage', function() {
   cy.get('div[class="lang-list-container"]').should('not.be.visible')
-  cy.get('button[id="js-lang-list-button"]')
-    .click()
+  cy.get('button[id="js-lang-list-button"]').click()
   cy.get('div[class="lang-list-container"]').should('be.visible')
-  cy.contains('Other languages').click()
+  cy.get('a[data-jsl10n="other-languages-label"]').click()
   cy.origin('https://meta.wikimedia.org/wiki/List_of_Wikipedias', () => {
     cy.url().should('be.equal', 'https://meta.wikimedia.org/wiki/List_of_Wikipedias')
     cy.get('h1[id="firstHeading"]').contains('List of Wikipedias')
