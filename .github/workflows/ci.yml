@@ -1,4 +1,4 @@
-name: Front-end Tests 🧪
+name: CI - Test Suite Execution 🧪
 on: [push]
 jobs:
   cypress-run:

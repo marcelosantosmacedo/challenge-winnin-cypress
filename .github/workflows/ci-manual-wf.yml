@@ -1,4 +1,4 @@
-name: Front-end Tests - Manual Workflow 🧪
+name: Manual Workflow - Test Suite Execution 🧪
 on:
   workflow_dispatch:
     inputs:
