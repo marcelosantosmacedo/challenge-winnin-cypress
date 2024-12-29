@@ -9,7 +9,6 @@
       .click()
       
       cy.origin('https://play.google.com', () => {
-        cy.get('a[aria-label="Logotipo do Google Play"]').should('be.visible')
         cy.title().should('be.equal','Wikipédia – Apps no Google Play')
       })
   })

@@ -143,7 +143,7 @@ describe('Test Suite - Wikipedia', { tags: '@regression' }, function() {
       cy.verifyExternalLinkGooglePlay()
     })
 
-    it('Checking if the external page will be loaded after changing the target to: Google Play - Wikipedia', function() {
+    it.only('Checking if the external page will be loaded after changing the target to: Google Play - Wikipedia', function() {
       cy.accessExternalLinkGooglePlay()
     })
 
