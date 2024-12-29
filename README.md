@@ -34,9 +34,13 @@ Run `npm run cy:run:visualtest:base` to run the test and generate a base image t
 
 Run `npm run cy:run:visualtest:actual` to run the test and generate the actual visual result and will be compared with the base image (`./cypress/snapshots/actual` folder will be created).
 
+Important! In the test case file `./cypress/e2e/visual-regression.cy.js` you can define the `errorThreshold` (e.g. 0.1 accept 10% of visual divergence considering the base image)
+![alt text](image.png)
+
 ### GitHub Actions
 
-In this project there are two types of GitHub Actions files, where the `ci.yml` file automatically executes the tests with each `"push"` performed, and the `cy-manual-wf.yml` file allows manual execution of the workflow (workflow_dispatch), where you define an execution `tag` (e.g. `smoke`)
+In this project there are two types of GitHub Actions files, where the `ci.yml` file automatically executes the tests with each `"push"` performed, and the `cy-manual-wf.yml` file allows manual execution of the workflow (workflow_dispatch), where you define an execution `tag` (e.g. `smoke` or `regression`)
+![alt text](image-1.png)
 ___
 
 This project was created by Marcelo Santos Macedo.
