@@ -138,4 +138,32 @@ describe('Test Suite - Wikipedia', { tags: '@regression' }, function() {
     })
   })
 
+  describe('External Links', function() {
+    it('Verifying the external link - Google Play - Wikipedia', { tags: '@smoke' }, function() {
+      cy.verifyExternalLinkGooglePlay()
+    })
+
+    it('Checking if the external page will be loaded after changing the target to: Google Play - Wikipedia', function() {
+      cy.accessExternalLinkGooglePlay()
+    })
+
+    it('Verifying the external link - Apple Store - Wikipedia', { tags: '@smoke' }, function() {
+      cy.verifyExternalLinkAppleStore()
+      
+    })
+
+    it('Checking if the external page will be loaded after changing the target to: Apple Store - Wikipedia', function() {
+      cy.accessExternalLinkAppleStore()
+    })
+
+    it('Verifying the external link - Support Donation - Wikipedia', { tags: '@smoke' }, function() {
+      cy.verifyExternalLinkDonate()
+    })
+
+    it('Checking if the external page will be loaded after changing the target to: Support Donation - Wikipedia', function() {
+      cy.accessExternalLinkDonate()
+    })
+
+  })
+
 })

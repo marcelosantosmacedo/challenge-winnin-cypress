@@ -17,6 +17,7 @@
 import './commands'
 import './set-top-language'
 import './wiki-other-projects'
+import './external-links'
 
 const registerCypressGrep = require('@cypress/grep')
 registerCypressGrep()
