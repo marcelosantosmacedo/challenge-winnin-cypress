@@ -78,7 +78,7 @@
   Cypress.Commands.add('accessOtherProjectWikifunctions', function() {
     cy.get('div[class="other-project"] [data-jsl10n="wikifunctions.name"]').click()
     cy.origin('https://www.wikifunctions.org/wiki/Wikifunctions:Main_Page', () => {
-        cy.get('h1[id="Welcome_to_Wikifunctions"]').contains('Welcome to Wikifunctions')
+        cy.get('p[class="main-title"]').should('be.visible')
     })
   })
 
