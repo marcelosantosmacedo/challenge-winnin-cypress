@@ -1,1 +1,2 @@
-/cypress/snapshots
+cypress/snapshots
+node_modules/
